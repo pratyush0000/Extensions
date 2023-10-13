@@ -24,7 +24,7 @@ inputButton.addEventListener("click", function(){
     //     alert("Not a link.");
     //     return;
     // }
-
+    
     myLeads.push(inputText.value)
 
     inputText.value=""
