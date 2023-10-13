@@ -19,6 +19,12 @@ if(ls){
 
 
 inputButton.addEventListener("click", function(){
+
+    // if (!url.startsWith("https://")) {
+    //     alert("Not a link.");
+    //     return;
+    // }
+
     myLeads.push(inputText.value)
 
     inputText.value=""
