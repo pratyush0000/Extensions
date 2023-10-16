@@ -39,10 +39,10 @@ inputButton.addEventListener("click", function(){
 
         console.log(localStorage.getItem("myLeads"))
     }
-    else if(inputText.value=""){
-        alertmessage.textContent="Empty input field. Paste a valid link."
-        inputText.value=""
-    }
+    // else if(inputText.value=""){
+    //     alertmessage.textContent="Empty input field. Paste a valid link."
+    //     inputText.value=""
+    // }
     else{
         alertmessage.textContent="Not a link. Please paste a valid link."
         inputText.value=""

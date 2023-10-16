@@ -23,7 +23,7 @@ button {
     border: 1px solid #00BCD4;
     /* border: 1px solid #5f9341; */
     font-weight: bold;
-    border-radius: 5vw;
+    /* border-radius: 5vw; */
 }
 
 #deleteButton {
