@@ -1,7 +1,9 @@
 //inputbutton
 let myLeads = []
+let myVisibleText = []
 const inputButton = document.getElementById("inputButton")
 const inputText = document.getElementById("inputText")
+const visibleText = document.getElementById("visibleText")
 const tabButton = document.getElementById("tabButton")
 const deleteButton = document.getElementById("deleteButton")
 let alertmessage = document.getElementById("alertmessage")
@@ -11,30 +13,32 @@ let ulEl = document.getElementById("ulEl")
 
 
 const ls = JSON.parse(localStorage.getItem("myLeads"))
+const vistext = JSON.parse(localStorage.getItem("myVisibleText"))
 
 console.log(ls)
 
-if(ls){
+if(ls,vistext){
+    myVisibleText=vistext
     myLeads=ls
-    printList(myLeads)
+    printList(myLeads,myVisibleText)
 }
 
 
 inputButton.addEventListener("click", function(){
 
-    // if (!url.startsWith("https://")) {
-    //     alert("Not a link.");
-    //     return;
-    // }
-
     if(inputText.value.startsWith("https://")){
         alertmessage.textContent=""
+
+        myVisibleText.push(visibleText.value)
+        visibleText.value=""
+
         myLeads.push(inputText.value)
-
         inputText.value=""
-        localStorage.setItem("myLeads",JSON.stringify(myLeads))
 
-        printList(myLeads)
+        localStorage.setItem("myLeads",JSON.stringify(myLeads))
+        localStorage.setItem("myVisibleText",JSON.stringify(myVisibleText))
+
+        printList(myLeads,myVisibleText)
 
 
         console.log(localStorage.getItem("myLeads"))
@@ -66,30 +70,21 @@ tabButton.addEventListener("click", function () {
     });
 });
 
-// tabButton.addEventListener("click", function(){
-
-//     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-//         myLeads.push(tabs[0].URL)
-//         localStorage.setItem("myLeads",JSON.stringify(myLeads))
-//         printList(myLeads)
-//     })
-// })
-
 
 deleteButton.addEventListener("dblclick", function(){
     localStorage.clear()
+    myVisibleText=[]
     myLeads=[]
-    printList(myLeads)
-    // ulEl.textContent=myLeads
+    printList(myLeads,myVisibleText)
 })
 
-function printList(e){
+function printList(e,vt){
     let listItems = ""
     for(let i=0;i<e.length;i++){
         listItems += `
             <li>
                 <a href = '${e[i]}' target='_blank'>
-                    ${e[i]}
+                    ${vt[i]}
                 </a>
             </li>
         `

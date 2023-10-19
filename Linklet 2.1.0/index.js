@@ -22,11 +22,6 @@ if(ls){
 
 inputButton.addEventListener("click", function(){
 
-    // if (!url.startsWith("https://")) {
-    //     alert("Not a link.");
-    //     return;
-    // }
-
     if(inputText.value.startsWith("https://")){
         alertmessage.textContent=""
         myLeads.push(inputText.value)
@@ -66,14 +61,6 @@ tabButton.addEventListener("click", function () {
     });
 });
 
-// tabButton.addEventListener("click", function(){
-
-//     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-//         myLeads.push(tabs[0].URL)
-//         localStorage.setItem("myLeads",JSON.stringify(myLeads))
-//         printList(myLeads)
-//     })
-// })
 
 
 deleteButton.addEventListener("dblclick", function(){

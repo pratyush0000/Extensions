@@ -1,0 +1,18 @@
+LINKLET
+
+v1.0.0
+basic outlining
+bug:all text enterable
+
+v2.0.0
+links can now be entered
+bug: shows invalid link even if empty
+
+v2.1.0
+detects empty input fields
+
+v2.7.0
+you can now enter text to be displayed
+
+v3.2.0
+colour option for links (hardcoded)
