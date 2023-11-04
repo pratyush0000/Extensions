@@ -1,0 +1,95 @@
+body {
+    /* background-color: #d4faff; */
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
+    max-width: 700px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #00BCD4;
+    /* border: 1px solid #5f9341; */
+    margin-bottom: 4px;
+}
+
+button {
+    background: #00BCD4;
+    /* background: #5f9341; */
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #00BCD4;
+    /* border: 1px solid #5f9341; */
+    font-weight: bold;
+    /* border-radius: 5vw; */
+}
+
+#deleteButton {
+    background: white;
+    color: #00BCD4;
+    /* color: #5f9341; */
+}
+
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-top: 5px;
+}
+
+a {
+    /* color: #00BCD4; */
+    color: yellowgreen;
+    /* color: #5f9341; */
+}
+
+#alertmessage{
+    color: red;
+}
+
+/* 00BCD4 */
+
+
+
+#radioButtons {
+    margin-bottom: 4px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row; /* To stack the radio buttons vertically */
+}
+
+.radio-box {
+    height: 10px;
+    /* background-color: red; */
+    /* background-color: #edfdff; */
+    border-radius: 50px;
+    width: 50px;
+    border: 1px solid #00BCD4; 
+    padding: 7px; /* Padding within the box */
+    margin-inline: 0px;
+    margin-right: 4px;
+    display: flex; /* To align the radio button and label horizontally */
+    align-items: center; /* To vertically center-align the radio button and label */
+}
+
+input[type="radio"] {
+    
+    margin: 0; /* Remove the margin around the radio button */
+}
+
+label {
+    margin: 0; /* Remove the margin around the label */
+}
+
+#radioorange{
+    border-radius: 15px;
+    height: 15px;
+    width: 25px;
+    background-color: orange;
+}
